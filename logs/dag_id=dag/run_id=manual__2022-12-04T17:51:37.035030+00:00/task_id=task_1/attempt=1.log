@@ -1,0 +1,30 @@
+[2022-12-04T17:51:40.826+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.task_1 manual__2022-12-04T17:51:37.035030+00:00 [queued]>
+[2022-12-04T17:51:40.913+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.task_1 manual__2022-12-04T17:51:37.035030+00:00 [queued]>
+[2022-12-04T17:51:40.926+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-04T17:51:40.927+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-04T17:51:40.929+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-04T17:51:41.044+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): task_1> on 2022-12-04 17:51:37.035030+00:00
+[2022-12-04T17:51:41.066+0000] {standard_task_runner.py:55} INFO - Started process 15853 to run task
+[2022-12-04T17:51:41.093+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'task_1', 'manual__2022-12-04T17:51:37.035030+00:00', '--job-id', '884', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmptir47fh9']
+[2022-12-04T17:51:41.106+0000] {standard_task_runner.py:83} INFO - Job 884: Subtask task_1
+[2022-12-04T17:51:41.509+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.task_1 manual__2022-12-04T17:51:37.035030+00:00 [running]> on host 37018d05bc9d
+[2022-12-04T17:51:42.059+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=task_1
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-04T17:51:37.035030+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-04T17:51:37.035030+00:00
+[2022-12-04T17:51:42.069+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 193, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+TypeError: get_c() missing 2 required positional arguments: 'ticker_from' and 'tikcer_to'
+[2022-12-04T17:51:42.188+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=dag, task_id=task_1, execution_date=20221204T175137, start_date=20221204T175140, end_date=20221204T175142
+[2022-12-04T17:51:42.335+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 884 for task task_1 (get_c() missing 2 required positional arguments: 'ticker_from' and 'tikcer_to'; 15853)
+[2022-12-04T17:51:42.423+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-04T17:51:42.903+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check
