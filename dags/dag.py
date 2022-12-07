@@ -188,4 +188,21 @@ with DAG(
             $$;
             CALL insert_data(); """,)  
      
-    encryption >> ti >> create_table >> fill_db >> materialized_view >> refresh_materialized >> create_prediction_table>>procedure_insert
+    metric_mse = PostgresOperator(
+        task_id = "metric_mse",
+        postgres_conn_id  = 'postgres_localhost',
+          sql =  """SELECT pairs.date, pairs.ticker_from, pairs.ticker_to, amount, amount_prediction, 
+                    AVG(POWER(amount - amount_prediction, 2)) 
+                    OVER (PARTITION BY pairs.ticker_from, pairs.ticker_to 
+                        ORDER BY pairs.date DESC ROWS BETWEEN 29 PRECEDING AND CURRENT ROW) 
+                        AS metric_mse 
+                    FROM pairs
+                    JOIN (
+                        SELECT date, ticker_from, ticker_to, amount_prediction
+                        FROM predictions
+                    ) AS preds
+                    ON pairs.date = preds.date
+                        AND pairs.ticker_from = preds.ticker_from
+                        AND pairs.ticker_to = preds.ticker_to""",) 
+    
+    encryption >> ti >> create_table >> fill_db >> materialized_view >> refresh_materialized >> create_prediction_table>>procedure_insert >> metric_mse
