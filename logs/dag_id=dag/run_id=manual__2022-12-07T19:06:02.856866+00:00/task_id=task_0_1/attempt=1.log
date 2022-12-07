@@ -1,0 +1,24 @@
+[2022-12-07T19:06:05.265+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.task_0_1 manual__2022-12-07T19:06:02.856866+00:00 [queued]>
+[2022-12-07T19:06:05.292+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.task_0_1 manual__2022-12-07T19:06:02.856866+00:00 [queued]>
+[2022-12-07T19:06:05.293+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T19:06:05.294+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-07T19:06:05.295+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T19:06:05.325+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): task_0_1> on 2022-12-07 19:06:02.856866+00:00
+[2022-12-07T19:06:05.335+0000] {standard_task_runner.py:55} INFO - Started process 4995 to run task
+[2022-12-07T19:06:05.357+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'task_0_1', 'manual__2022-12-07T19:06:02.856866+00:00', '--job-id', '1835', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp4164ma5f']
+[2022-12-07T19:06:05.358+0000] {standard_task_runner.py:83} INFO - Job 1835: Subtask task_0_1
+[2022-12-07T19:06:05.603+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.task_0_1 manual__2022-12-07T19:06:02.856866+00:00 [running]> on host a9d6893ff63e
+[2022-12-07T19:06:05.989+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=task_0_1
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T19:06:02.856866+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-07T19:06:02.856866+00:00
+[2022-12-07T19:06:10.433+0000] {logging_mixin.py:137} INFO - курс одного USD к RUB: 63.48500466
+[2022-12-07T19:06:10.464+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-07T19:06:10.485+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag, task_id=task_0_1, execution_date=20221207T190602, start_date=20221207T190605, end_date=20221207T190610
+[2022-12-07T19:06:10.537+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-07T19:06:10.577+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -46,7 +46,29 @@ def insert_data(ti):
     finally:
         if conn is not None:
             conn.close()
-            
+
+def materialized_view_creation():
+    query = """CREATE MATERIALIZED VIEW IF NOT EXISTS predictions AS(
+                SELECT date,ticker_from, ticker_to, AVG(amount) 
+                OVER(PARTITION BY ticker_from, ticker_to ROWS BETWEEN 29 PRECEDING AND CURRENT ROW)
+                AS amount_prediction
+                FROM pairs
+                ORDER BY date DESC)"""
+    conn = None
+    try:
+        conn = psycopg2.connect(host ='database', user= str(configs()[1]), password= str(configs()[2]), dbname= str(configs()[3]))
+        print('Postgresql connection created!')
+        conn.autocommit = True
+        cur = conn.cursor()
+        cur.execute(query)
+        print('Data successfully inserted!')
+        cur.close()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
+    finally:
+        if conn is not None:
+            conn.close()
+           
 class Currency:
     def get_currencies(self):
         x = requests.get('https://api.currencybeacon.com/v1/currencies', params={'api_key': TOKEN})
@@ -83,7 +105,8 @@ class Currency:
         x = requests.get('https://api.currencybeacon.com/v1/historical', params={'api_key': TOKEN, 'base': base, 'date': date})
         response = x.json()
         return response
-
+    
+#DAG
 args = {
     'owner': 'lofitravel',
     'start_date':datetime(2022, 12, 4),
@@ -96,7 +119,8 @@ with DAG(
     schedule_interval='@daily', #'0 0 * * *'
     catchup=False,
     default_args=args) as dag:
-
+        
+#TASKS
     encryption = PythonOperator(
 	    task_id ='encryption',
         python_callable = configs)
@@ -126,16 +150,42 @@ with DAG(
         """,)
 
     fill_db = PythonOperator(
-	    task_id ='pull_data',
+	    task_id ='insert_data',
         python_callable = insert_data)
 
-    # materialized_view = PythonOperator(
-	# task_id ='materialized_view',
-    # python_callable = configs)
+    materialized_view = PythonOperator(
+	task_id ='materialized_view',
+    python_callable = materialized_view_creation)
 
-    encryption >> ti >> create_table >> fill_db
+    refresh_materialized = PostgresOperator(
+        task_id = "refresh_materialized",
+        postgres_conn_id  = 'postgres_localhost',
+        sql = """REFRESH MATERIALIZED VIEW predictions
+        """,)
+
+    create_prediction_table = PostgresOperator(
+        task_id = "create_prediction_table",
+        postgres_conn_id  = 'postgres_localhost',
+        sql = """
+        CREATE TABLE IF NOT EXISTS prediction_table(
+            date TIMESTAMP NOT NULL,
+            ticker_from VARCHAR(3) NOT NULL,
+            ticker_to VARCHAR(3) NOT NULL,
+            amount FLOAT NOT NULL,
+        PRIMARY KEY (date, ticker_from, ticker_to));
+        """,)
     
-    # SELECT date,ticker_from, ticker_to, AVG(amount) 
-    # OVER(PARTITION BY ticker_from, ticker_to ROWS BETWEEN 29 PRECEDING AND CURRENT ROW)
-    # AS avg_
-    # FROM pairs;
+    procedure_insert = PostgresOperator(
+        task_id = "procedure_insert",
+        postgres_conn_id  = 'postgres_localhost',
+        sql = """
+            CREATE OR REPLACE PROCEDURE insert_data()
+            LANGUAGE SQL
+            AS $$
+            INSERT INTO prediction_table
+            SELECT date + interval '1 day', ticker_from, ticker_to, amount_prediction from predictions
+            WHERE date = CURRENT_DATE 
+            $$;
+            CALL insert_data(); """,)  
+     
+    encryption >> ti >> create_table >> fill_db >> materialized_view >> refresh_materialized >> create_prediction_table>>procedure_insert

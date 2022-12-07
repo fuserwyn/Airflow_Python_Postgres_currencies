@@ -1,0 +1,28 @@
+[2022-12-07T14:50:24.646+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.materialized_view manual__2022-12-07T14:50:12.709258+00:00 [queued]>
+[2022-12-07T14:50:24.673+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.materialized_view manual__2022-12-07T14:50:12.709258+00:00 [queued]>
+[2022-12-07T14:50:24.673+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T14:50:24.674+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-07T14:50:24.675+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T14:50:24.710+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): materialized_view> on 2022-12-07 14:50:12.709258+00:00
+[2022-12-07T14:50:24.717+0000] {standard_task_runner.py:55} INFO - Started process 247 to run task
+[2022-12-07T14:50:24.725+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'materialized_view', 'manual__2022-12-07T14:50:12.709258+00:00', '--job-id', '1806', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpk8cn5i94']
+[2022-12-07T14:50:24.727+0000] {standard_task_runner.py:83} INFO - Job 1806: Subtask materialized_view
+[2022-12-07T14:50:24.862+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.materialized_view manual__2022-12-07T14:50:12.709258+00:00 [running]> on host 20d9dd97c6ff
+[2022-12-07T14:50:25.178+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=materialized_view
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T14:50:12.709258+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-07T14:50:12.709258+00:00
+[2022-12-07T14:50:25.197+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', '***_user', '***_ps', '***_database']
+[2022-12-07T14:50:25.216+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', '***_user', '***_ps', '***_database']
+[2022-12-07T14:50:25.233+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', '***_user', '***_ps', '***_database']
+[2022-12-07T14:50:25.253+0000] {logging_mixin.py:137} INFO - Postgresql connection created!
+[2022-12-07T14:50:25.254+0000] {logging_mixin.py:137} INFO - function missing required argument 'vars_list' (pos 2)
+[2022-12-07T14:50:25.255+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-07T14:50:25.281+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag, task_id=materialized_view, execution_date=20221207T145012, start_date=20221207T145024, end_date=20221207T145025
+[2022-12-07T14:50:25.342+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-07T14:50:25.395+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check

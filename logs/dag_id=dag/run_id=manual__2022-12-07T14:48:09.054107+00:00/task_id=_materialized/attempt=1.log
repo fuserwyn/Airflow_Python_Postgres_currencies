@@ -1,0 +1,37 @@
+[2022-12-07T14:48:30.490+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag._materialized manual__2022-12-07T14:48:09.054107+00:00 [queued]>
+[2022-12-07T14:48:30.522+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag._materialized manual__2022-12-07T14:48:09.054107+00:00 [queued]>
+[2022-12-07T14:48:30.523+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T14:48:30.524+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-07T14:48:30.525+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T14:48:30.555+0000] {taskinstance.py:1383} INFO - Executing <Task(PostgresOperator): _materialized> on 2022-12-07 14:48:09.054107+00:00
+[2022-12-07T14:48:30.562+0000] {standard_task_runner.py:55} INFO - Started process 136 to run task
+[2022-12-07T14:48:30.568+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', '_materialized', 'manual__2022-12-07T14:48:09.054107+00:00', '--job-id', '1791', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpu59u5vis']
+[2022-12-07T14:48:30.570+0000] {standard_task_runner.py:83} INFO - Job 1791: Subtask _materialized
+[2022-12-07T14:48:30.669+0000] {task_command.py:376} INFO - Running <TaskInstance: dag._materialized manual__2022-12-07T14:48:09.054107+00:00 [running]> on host 20d9dd97c6ff
+[2022-12-07T14:48:30.822+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=_materialized
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T14:48:09.054107+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-07T14:48:09.054107+00:00
+[2022-12-07T14:48:30.846+0000] {base.py:71} INFO - Using connection ID 'postgres_localhost' for task execution.
+[2022-12-07T14:48:30.867+0000] {sql.py:315} INFO - Running statement: REFRESH MATERIALIZED VIEW predictions
+        , parameters: None
+[2022-12-07T14:48:30.871+0000] {taskinstance.py:1851} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 94, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 295, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/common/sql/hooks/sql.py", line 320, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UndefinedTable: relation "predictions" does not exist
+
+[2022-12-07T14:48:30.984+0000] {taskinstance.py:1406} INFO - Marking task as FAILED. dag_id=dag, task_id=_materialized, execution_date=20221207T144809, start_date=20221207T144830, end_date=20221207T144830
+[2022-12-07T14:48:31.046+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1791 for task _materialized (relation "predictions" does not exist
+; 136)
+[2022-12-07T14:48:31.100+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2022-12-07T14:48:31.132+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

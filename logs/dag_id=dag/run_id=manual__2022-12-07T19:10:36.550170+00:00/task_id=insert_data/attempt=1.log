@@ -1,0 +1,29 @@
+[2022-12-07T19:10:47.163+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.insert_data manual__2022-12-07T19:10:36.550170+00:00 [queued]>
+[2022-12-07T19:10:47.191+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.insert_data manual__2022-12-07T19:10:36.550170+00:00 [queued]>
+[2022-12-07T19:10:47.192+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T19:10:47.194+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-07T19:10:47.196+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T19:10:47.237+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): insert_data> on 2022-12-07 19:10:36.550170+00:00
+[2022-12-07T19:10:47.244+0000] {standard_task_runner.py:55} INFO - Started process 5229 to run task
+[2022-12-07T19:10:47.250+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'insert_data', 'manual__2022-12-07T19:10:36.550170+00:00', '--job-id', '1847', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpo8u884n6']
+[2022-12-07T19:10:47.251+0000] {standard_task_runner.py:83} INFO - Job 1847: Subtask insert_data
+[2022-12-07T19:10:47.365+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.insert_data manual__2022-12-07T19:10:36.550170+00:00 [running]> on host a9d6893ff63e
+[2022-12-07T19:10:47.498+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=insert_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T19:10:36.550170+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-07T19:10:36.550170+00:00
+[2022-12-07T19:10:47.526+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', '***_user', '***_ps', '***_database']
+[2022-12-07T19:10:47.538+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', '***_user', '***_ps', '***_database']
+[2022-12-07T19:10:47.547+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', '***_user', '***_ps', '***_database']
+[2022-12-07T19:10:47.559+0000] {logging_mixin.py:137} INFO - Postgresql connection created!
+[2022-12-07T19:10:47.561+0000] {logging_mixin.py:137} INFO - duplicate key value violates unique constraint "pairs_pkey"
+DETAIL:  Key (date, ticker_from, ticker_to)=(2022-12-07 00:00:00, USD, EUR) already exists.
+[2022-12-07T19:10:47.563+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-07T19:10:47.584+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag, task_id=insert_data, execution_date=20221207T191036, start_date=20221207T191047, end_date=20221207T191047
+[2022-12-07T19:10:47.622+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-07T19:10:47.667+0000] {taskinstance.py:2623} INFO - 1 downstream tasks scheduled from follow-on schedule check
