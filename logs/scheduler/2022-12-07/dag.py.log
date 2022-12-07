@@ -178,3 +178,391 @@
 [2022-12-07T22:32:17.927+0000] {logging_mixin.py:137} INFO - [2022-12-07T22:32:17.927+0000] {dag.py:2585} INFO - Sync 1 DAGs
 [2022-12-07T22:32:17.979+0000] {logging_mixin.py:137} INFO - [2022-12-07T22:32:17.979+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
 [2022-12-07T22:32:18.013+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.236 seconds
+[2022-12-07T23:36:39.605+0000] {processor.py:154} INFO - Started process (PID=46) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:36:39.607+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:36:39.612+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:36:39.612+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:36:40.026+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:36:40.020+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 17, in <module>
+    TOKEN = str(configs()[0])
+  File "/opt/airflow/dags/dag.py", line 11, in configs
+    dag_config = Variable.get("variables_config", deserialize_json=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable variables_config does not exist'
+[2022-12-07T23:36:40.029+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:36:40.056+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.459 seconds
+[2022-12-07T23:37:10.445+0000] {processor.py:154} INFO - Started process (PID=110) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:37:10.447+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:37:10.448+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:37:10.447+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:37:10.636+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:37:10.632+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 17, in <module>
+    TOKEN = str(configs()[0])
+  File "/opt/airflow/dags/dag.py", line 11, in configs
+    dag_config = Variable.get("variables_config", deserialize_json=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable variables_config does not exist'
+[2022-12-07T23:37:10.638+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:37:10.658+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.217 seconds
+[2022-12-07T23:37:41.502+0000] {processor.py:154} INFO - Started process (PID=166) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:37:41.503+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:37:41.505+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:37:41.504+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:37:41.647+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:37:41.639+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 17, in <module>
+    TOKEN = str(configs()[0])
+  File "/opt/airflow/dags/dag.py", line 11, in configs
+    dag_config = Variable.get("variables_config", deserialize_json=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable variables_config does not exist'
+[2022-12-07T23:37:41.650+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:37:41.673+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.175 seconds
+[2022-12-07T23:38:12.000+0000] {processor.py:154} INFO - Started process (PID=231) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:38:12.002+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:38:12.004+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:38:12.003+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:38:12.127+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:38:12.123+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 17, in <module>
+    TOKEN = str(configs()[0])
+  File "/opt/airflow/dags/dag.py", line 11, in configs
+    dag_config = Variable.get("variables_config", deserialize_json=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable variables_config does not exist'
+[2022-12-07T23:38:12.129+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:38:12.143+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.148 seconds
+[2022-12-07T23:38:42.184+0000] {processor.py:154} INFO - Started process (PID=286) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:38:42.185+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:38:42.186+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:38:42.186+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:38:42.298+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:38:42.294+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 17, in <module>
+    TOKEN = str(configs()[0])
+  File "/opt/airflow/dags/dag.py", line 11, in configs
+    dag_config = Variable.get("variables_config", deserialize_json=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable variables_config does not exist'
+[2022-12-07T23:38:42.299+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:38:42.310+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.130 seconds
+[2022-12-07T23:39:12.667+0000] {processor.py:154} INFO - Started process (PID=350) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:39:12.669+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:39:12.670+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:12.670+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:39:12.805+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:12.796+0000] {dagbag.py:342} ERROR - Failed to import: /opt/airflow/dags/dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 338, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag.py", line 17, in <module>
+    TOKEN = str(configs()[0])
+  File "/opt/airflow/dags/dag.py", line 11, in configs
+    dag_config = Variable.get("variables_config", deserialize_json=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/variable.py", line 141, in get
+    raise KeyError(f'Variable {key} does not exist')
+KeyError: 'Variable variables_config does not exist'
+[2022-12-07T23:39:12.807+0000] {processor.py:768} WARNING - No viable dags retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:39:12.832+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.168 seconds
+[2022-12-07T23:39:43.492+0000] {processor.py:154} INFO - Started process (PID=405) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:39:43.494+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:39:43.495+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.494+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:39:43.626+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:39:43.627+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:39:43.633+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:39:43.634+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:39:43.635+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:39:43.649+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:39:43.750+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.750+0000] {manager.py:507} INFO - Created Permission View: can read on DAG:dag
+[2022-12-07T23:39:43.762+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.762+0000] {manager.py:507} INFO - Created Permission View: can delete on DAG:dag
+[2022-12-07T23:39:43.771+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.771+0000] {manager.py:507} INFO - Created Permission View: can edit on DAG:dag
+[2022-12-07T23:39:43.772+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.772+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:39:43.789+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.789+0000] {dag.py:2606} INFO - Creating ORM DAG for dag
+[2022-12-07T23:39:43.807+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:39:43.807+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:39:43.833+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.346 seconds
+[2022-12-07T23:40:14.052+0000] {processor.py:154} INFO - Started process (PID=469) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:40:14.053+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:40:14.054+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:40:14.054+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:40:14.154+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:40:14.155+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:40:14.161+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:40:14.162+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:40:14.163+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:40:14.174+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:40:14.212+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:40:14.212+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:40:14.247+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:40:14.247+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:40:14.270+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.224 seconds
+[2022-12-07T23:40:45.084+0000] {processor.py:154} INFO - Started process (PID=524) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:40:45.085+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:40:45.086+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:40:45.086+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:40:45.182+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:40:45.183+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:40:45.188+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:40:45.189+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:40:45.190+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:40:45.202+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:40:45.240+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:40:45.240+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:40:45.279+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:40:45.279+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:40:45.303+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.223 seconds
+[2022-12-07T23:45:15.165+0000] {processor.py:154} INFO - Started process (PID=47) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:45:15.167+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:45:15.170+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:45:15.169+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:45:15.512+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:45:15.513+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:45:15.535+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:45:15.567+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:45:15.572+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:45:15.597+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:45:15.816+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:45:15.816+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:45:15.874+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:45:15.874+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:45:15.922+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.763 seconds
+[2022-12-07T23:45:46.719+0000] {processor.py:154} INFO - Started process (PID=103) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:45:46.721+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:45:46.722+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:45:46.722+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:45:46.878+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:45:46.878+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:45:46.885+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:45:46.886+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:45:46.887+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:45:46.898+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:45:46.944+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:45:46.944+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:45:46.981+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:45:46.981+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:45:47.009+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.294 seconds
+[2022-12-07T23:46:17.075+0000] {processor.py:154} INFO - Started process (PID=170) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:46:17.077+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:46:17.078+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:46:17.078+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:46:17.230+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:46:17.230+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:46:17.238+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:46:17.239+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:46:17.240+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:46:17.250+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:46:17.297+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:46:17.297+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:46:17.336+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:46:17.336+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:46:17.368+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.299 seconds
+[2022-12-07T23:46:48.076+0000] {processor.py:154} INFO - Started process (PID=234) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:46:48.078+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:46:48.079+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:46:48.079+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:46:48.208+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:46:48.209+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:46:48.216+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:46:48.217+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:46:48.217+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:46:48.234+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:46:48.284+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:46:48.283+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:46:48.324+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:46:48.324+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:46:48.359+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.286 seconds
+[2022-12-07T23:47:18.529+0000] {processor.py:154} INFO - Started process (PID=289) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:47:18.530+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:47:18.531+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:47:18.531+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:47:18.668+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:47:18.669+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:47:18.675+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:47:18.676+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:47:18.677+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:47:18.689+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:47:18.731+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:47:18.730+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:47:18.767+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:47:18.766+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:47:18.792+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.268 seconds
+[2022-12-07T23:47:49.608+0000] {processor.py:154} INFO - Started process (PID=353) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:47:49.610+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:47:49.611+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:47:49.610+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:47:49.721+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:47:49.721+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:47:49.728+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:47:49.729+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:47:49.730+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:47:49.744+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:47:49.805+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:47:49.805+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:47:49.850+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:47:49.850+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:47:49.880+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.276 seconds
+[2022-12-07T23:48:20.640+0000] {processor.py:154} INFO - Started process (PID=415) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:48:20.645+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:48:20.647+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:48:20.647+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:48:20.854+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:48:20.855+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:48:20.867+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:48:20.868+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:48:20.869+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:48:20.894+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:48:20.967+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:48:20.967+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:48:21.055+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:48:21.055+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-06T00:00:00+00:00, run_after=2022-12-07T00:00:00+00:00
+[2022-12-07T23:48:21.097+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.466 seconds
+[2022-12-07T23:48:51.268+0000] {processor.py:154} INFO - Started process (PID=485) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:48:51.269+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:48:51.270+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:48:51.270+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:48:51.393+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:48:51.393+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:48:51.403+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:48:51.404+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:48:51.405+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:48:51.419+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:48:51.465+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:48:51.464+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:48:51.523+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:48:51.523+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:48:51.550+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.287 seconds
+[2022-12-07T23:49:21.703+0000] {processor.py:154} INFO - Started process (PID=540) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:49:21.704+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:49:21.705+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:49:21.705+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:49:21.798+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:49:21.799+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:49:21.806+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:49:21.807+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:49:21.808+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:49:21.817+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:49:21.855+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:49:21.855+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:49:21.891+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:49:21.891+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:49:21.914+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.215 seconds
+[2022-12-07T23:49:52.022+0000] {processor.py:154} INFO - Started process (PID=604) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:49:52.023+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:49:52.024+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:49:52.024+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:49:52.116+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:49:52.117+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:49:52.122+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:49:52.122+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:49:52.123+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:49:52.132+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:49:52.170+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:49:52.170+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:49:52.205+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:49:52.205+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:49:52.227+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.208 seconds
+[2022-12-07T23:50:22.697+0000] {processor.py:154} INFO - Started process (PID=665) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:50:22.699+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:50:22.701+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:50:22.700+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:50:22.825+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:50:22.826+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:50:22.833+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:50:22.834+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:50:22.835+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:50:22.849+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:50:22.899+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:50:22.898+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:50:22.961+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:50:22.961+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:50:23.004+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.312 seconds
+[2022-12-07T23:50:53.169+0000] {processor.py:154} INFO - Started process (PID=722) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:50:53.170+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:50:53.171+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:50:53.171+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:50:53.300+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:50:53.302+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:50:53.311+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:50:53.312+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:50:53.313+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:50:53.332+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:50:53.388+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:50:53.387+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:50:53.448+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:50:53.447+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:50:53.500+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.337 seconds
+[2022-12-07T23:51:23.710+0000] {processor.py:154} INFO - Started process (PID=786) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:51:23.711+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:51:23.712+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:51:23.712+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:51:23.838+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:51:23.838+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:51:23.847+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:51:23.848+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:51:23.849+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:51:23.867+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:51:23.934+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:51:23.934+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:51:23.990+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:51:23.990+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:51:24.025+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.322 seconds
+[2022-12-07T23:51:54.586+0000] {processor.py:154} INFO - Started process (PID=841) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:51:54.587+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:51:54.588+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:51:54.588+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:51:54.702+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:51:54.703+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:51:54.713+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:51:54.715+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:51:54.715+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:51:54.729+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:51:54.797+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:51:54.796+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:51:54.861+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:51:54.860+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:51:54.898+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.317 seconds
+[2022-12-07T23:52:25.546+0000] {processor.py:154} INFO - Started process (PID=905) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:52:25.547+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:52:25.549+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:52:25.548+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:52:25.672+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:52:25.672+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:52:25.678+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:52:25.678+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:52:25.679+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:52:25.693+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:52:25.740+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:52:25.740+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:52:25.795+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:52:25.795+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:52:25.827+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.285 seconds
+[2022-12-07T23:52:56.120+0000] {processor.py:154} INFO - Started process (PID=965) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:52:56.121+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:52:56.122+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:52:56.122+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:52:56.230+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:52:56.230+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:52:56.237+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:52:56.238+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:52:56.239+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:52:56.249+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:52:56.296+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:52:56.296+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:52:56.344+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:52:56.344+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:52:56.375+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.260 seconds
+[2022-12-07T23:53:26.504+0000] {processor.py:154} INFO - Started process (PID=1029) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:53:26.505+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:53:26.506+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:53:26.506+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:53:26.608+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:53:26.608+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:53:26.615+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:53:26.616+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:53:26.617+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:53:26.628+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:53:26.668+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:53:26.668+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:53:26.710+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:53:26.710+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:53:26.737+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.237 seconds
+[2022-12-07T23:53:57.368+0000] {processor.py:154} INFO - Started process (PID=1084) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:53:57.369+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:53:57.370+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:53:57.370+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:53:57.489+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:53:57.489+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:53:57.498+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:53:57.501+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:53:57.502+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:53:57.521+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:53:57.575+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:53:57.575+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:53:57.639+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:53:57.638+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:53:57.669+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.308 seconds
+[2022-12-07T23:54:27.845+0000] {processor.py:154} INFO - Started process (PID=1154) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:54:27.846+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:54:27.848+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:54:27.848+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:54:28.007+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:54:28.008+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:54:28.016+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:54:28.018+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:54:28.019+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:54:28.043+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:54:28.155+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:54:28.154+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:54:28.200+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:54:28.200+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:54:28.233+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.394 seconds
+[2022-12-07T23:54:58.538+0000] {processor.py:154} INFO - Started process (PID=1209) to work on /opt/airflow/dags/dag.py
+[2022-12-07T23:54:58.539+0000] {processor.py:756} INFO - Processing file /opt/airflow/dags/dag.py for tasks to queue
+[2022-12-07T23:54:58.541+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:54:58.541+0000] {dagbag.py:537} INFO - Filling up the DagBag from /opt/airflow/dags/dag.py
+[2022-12-07T23:54:58.672+0000] {logging_mixin.py:137} INFO - var ['82adcbbbae7a13d16e0b68fa1f50c023', 'airflow_user', 'airflow_ps', 'airflow_database']
+[2022-12-07T23:54:58.673+0000] {logging_mixin.py:137} INFO - 82adcbbbae7a13d16e0b68fa1f50c023
+[2022-12-07T23:54:58.680+0000] {logging_mixin.py:137} INFO - USD EUR
+[2022-12-07T23:54:58.682+0000] {logging_mixin.py:137} INFO - USD RUB
+[2022-12-07T23:54:58.682+0000] {logging_mixin.py:137} INFO - EUR RUB
+[2022-12-07T23:54:58.694+0000] {processor.py:766} INFO - DAG(s) dict_keys(['dag']) retrieved from /opt/airflow/dags/dag.py
+[2022-12-07T23:54:58.746+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:54:58.745+0000] {dag.py:2585} INFO - Sync 1 DAGs
+[2022-12-07T23:54:58.787+0000] {logging_mixin.py:137} INFO - [2022-12-07T23:54:58.787+0000] {dag.py:3340} INFO - Setting next_dagrun for dag to 2022-12-07T00:00:00+00:00, run_after=2022-12-08T00:00:00+00:00
+[2022-12-07T23:54:58.823+0000] {processor.py:176} INFO - Processing /opt/airflow/dags/dag.py took 0.290 seconds
