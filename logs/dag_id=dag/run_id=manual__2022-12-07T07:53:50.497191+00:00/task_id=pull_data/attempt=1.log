@@ -1,0 +1,30 @@
+[2022-12-07T07:53:59.441+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.pull_data manual__2022-12-07T07:53:50.497191+00:00 [queued]>
+[2022-12-07T07:53:59.463+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.pull_data manual__2022-12-07T07:53:50.497191+00:00 [queued]>
+[2022-12-07T07:53:59.464+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T07:53:59.465+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-07T07:53:59.465+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T07:53:59.496+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): pull_data> on 2022-12-07 07:53:50.497191+00:00
+[2022-12-07T07:53:59.503+0000] {standard_task_runner.py:55} INFO - Started process 29791 to run task
+[2022-12-07T07:53:59.510+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'pull_data', 'manual__2022-12-07T07:53:50.497191+00:00', '--job-id', '1545', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpe_yidlrn']
+[2022-12-07T07:53:59.511+0000] {standard_task_runner.py:83} INFO - Job 1545: Subtask pull_data
+[2022-12-07T07:53:59.633+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.pull_data manual__2022-12-07T07:53:50.497191+00:00 [running]> on host 505aa50095aa
+[2022-12-07T07:53:59.771+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=pull_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T07:53:50.497191+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-07T07:53:50.497191+00:00
+[2022-12-07T07:53:59.790+0000] {logging_mixin.py:137} INFO - [('2022-12-07', 'USD', 'EUR', '0.95633956'), ('2022-12-07', 'USD', 'RUB', '63.04844115'), ('2022-12-07', 'EUR', 'RUB', '65.92683611')]
+[2022-12-07T07:53:59.807+0000] {logging_mixin.py:137} INFO - Postgresql connection created!
+[2022-12-07T07:53:59.809+0000] {logging_mixin.py:137} INFO - Failed to insert into PostgreSQL
+[2022-12-07T07:53:59.810+0000] {logging_mixin.py:137} INFO - relation "pairs" does not exist
+LINE 1: INSERT INTO pairs(date, ticker_from, ticker_to, amount) VALU...
+                    ^
+[2022-12-07T07:53:59.810+0000] {logging_mixin.py:137} INFO - CSSS
+[2022-12-07T07:53:59.812+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-07T07:53:59.837+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag, task_id=pull_data, execution_date=20221207T075350, start_date=20221207T075359, end_date=20221207T075359
+[2022-12-07T07:53:59.880+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-07T07:53:59.921+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

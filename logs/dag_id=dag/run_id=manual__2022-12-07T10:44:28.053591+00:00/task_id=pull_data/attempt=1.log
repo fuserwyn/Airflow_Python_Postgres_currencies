@@ -1,0 +1,26 @@
+[2022-12-07T10:44:34.027+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.pull_data manual__2022-12-07T10:44:28.053591+00:00 [queued]>
+[2022-12-07T10:44:34.043+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.pull_data manual__2022-12-07T10:44:28.053591+00:00 [queued]>
+[2022-12-07T10:44:34.044+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T10:44:34.044+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-07T10:44:34.045+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-07T10:44:34.067+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): pull_data> on 2022-12-07 10:44:28.053591+00:00
+[2022-12-07T10:44:34.072+0000] {standard_task_runner.py:55} INFO - Started process 1327 to run task
+[2022-12-07T10:44:34.076+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'pull_data', 'manual__2022-12-07T10:44:28.053591+00:00', '--job-id', '1691', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpbxzbdffs']
+[2022-12-07T10:44:34.077+0000] {standard_task_runner.py:83} INFO - Job 1691: Subtask pull_data
+[2022-12-07T10:44:34.189+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.pull_data manual__2022-12-07T10:44:28.053591+00:00 [running]> on host ede3719a0239
+[2022-12-07T10:44:34.292+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=pull_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-07T10:44:28.053591+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-07T10:44:28.053591+00:00
+[2022-12-07T10:44:34.315+0000] {logging_mixin.py:137} INFO - Postgresql connection created!
+[2022-12-07T10:44:34.316+0000] {logging_mixin.py:137} INFO - duplicate key value violates unique constraint "pairs_pkey"
+DETAIL:  Key (date, ticker_from, ticker_to)=(2022-12-07 00:00:00, USD, EUR) already exists.
+[2022-12-07T10:44:34.317+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-07T10:44:34.333+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag, task_id=pull_data, execution_date=20221207T104428, start_date=20221207T104434, end_date=20221207T104434
+[2022-12-07T10:44:34.368+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-07T10:44:34.432+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,25 @@
+[2022-12-06T22:36:25.769+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.pull_data manual__2022-12-06T22:36:20.534225+00:00 [queued]>
+[2022-12-06T22:36:25.783+0000] {taskinstance.py:1165} INFO - Dependencies all met for <TaskInstance: dag.pull_data manual__2022-12-06T22:36:20.534225+00:00 [queued]>
+[2022-12-06T22:36:25.784+0000] {taskinstance.py:1362} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-06T22:36:25.785+0000] {taskinstance.py:1363} INFO - Starting attempt 1 of 1
+[2022-12-06T22:36:25.785+0000] {taskinstance.py:1364} INFO - 
+--------------------------------------------------------------------------------
+[2022-12-06T22:36:25.805+0000] {taskinstance.py:1383} INFO - Executing <Task(PythonOperator): pull_data> on 2022-12-06 22:36:20.534225+00:00
+[2022-12-06T22:36:25.811+0000] {standard_task_runner.py:55} INFO - Started process 3322 to run task
+[2022-12-06T22:36:25.816+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'dag', 'pull_data', 'manual__2022-12-06T22:36:20.534225+00:00', '--job-id', '1259', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp719p8cm5']
+[2022-12-06T22:36:25.817+0000] {standard_task_runner.py:83} INFO - Job 1259: Subtask pull_data
+[2022-12-06T22:36:25.915+0000] {task_command.py:376} INFO - Running <TaskInstance: dag.pull_data manual__2022-12-06T22:36:20.534225+00:00 [running]> on host 505aa50095aa
+[2022-12-06T22:36:26.031+0000] {taskinstance.py:1592} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=lofitravel
+AIRFLOW_CTX_DAG_ID=dag
+AIRFLOW_CTX_TASK_ID=pull_data
+AIRFLOW_CTX_EXECUTION_DATE=2022-12-06T22:36:20.534225+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-12-06T22:36:20.534225+00:00
+[2022-12-06T22:36:26.047+0000] {logging_mixin.py:137} INFO - ["('2022-12-06', 'USD', 'EUR', 0.95530319)", "('2022-12-06', 'USD', 'RUB', 63.38344107)", "('2022-12-06', 'EUR', 'RUB', 66.34903103)"]
+[2022-12-06T22:36:26.060+0000] {logging_mixin.py:137} INFO - not all arguments converted during string formatting
+[2022-12-06T22:36:26.061+0000] {python.py:177} INFO - Done. Returned value was: None
+[2022-12-06T22:36:26.078+0000] {taskinstance.py:1406} INFO - Marking task as SUCCESS. dag_id=dag, task_id=pull_data, execution_date=20221206T223620, start_date=20221206T223625, end_date=20221206T223626
+[2022-12-06T22:36:26.107+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2022-12-06T22:36:26.132+0000] {taskinstance.py:2623} INFO - 0 downstream tasks scheduled from follow-on schedule check

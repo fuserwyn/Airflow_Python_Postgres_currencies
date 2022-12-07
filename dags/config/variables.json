@@ -1,0 +1,8 @@
+{
+	"variables_config": {
+		"AIRFLOW_API_KEY": "82adcbbbae7a13d16e0b68fa1f50c023",
+		"POSTGRES_USER":"airflow_user",
+		"POSTGRES_PASSWORD":"airflow_ps",
+		"POSTGRES_DB":"airflow_database"
+		}
+	}
