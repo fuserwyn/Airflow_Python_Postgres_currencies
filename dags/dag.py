@@ -2,11 +2,10 @@ from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.postgres_operator import PostgresOperator
-from datetime import datetime, timedelta
+from datetime import datetime
 from airflow.models import Variable
 import requests
 import psycopg2
-
 
 def configs():
     dag_config = Variable.get("variables_config", deserialize_json=True)
@@ -130,8 +129,13 @@ with DAG(
 	    task_id ='pull_data',
         python_callable = insert_data)
 
-    materialized_view = PythonOperator(
-	task_id ='materialized_view',
-    python_callable = configs)
+    # materialized_view = PythonOperator(
+	# task_id ='materialized_view',
+    # python_callable = configs)
 
     encryption >> ti >> create_table >> fill_db
+    
+    # SELECT date,ticker_from, ticker_to, AVG(amount) 
+    # OVER(PARTITION BY ticker_from, ticker_to ROWS BETWEEN 29 PRECEDING AND CURRENT ROW)
+    # AS avg_
+    # FROM pairs;
